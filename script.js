@@ -1,16 +1,8 @@
 var x = document.getElementById("myBtn");
-x.addEventListener("mouseover", myFunction);
-x.addEventListener("click", mySecondFunction);
-x.addEventListener("mouseout", myThirdFunction);
+x.addEventListener("click", clickCounter);
+let clicks= 0;
 
-function myFunction() {
-  document.getElementById("demo").innerHTML += "Moused over!<br>";
-}
-
-function mySecondFunction() {
-  document.getElementById("demo").innerHTML += "Clicked!<br>";
-}
-
-function myThirdFunction() {
-  document.getElementById("demo").innerHTML += "Moused out!<br>";
+function clickCounter() { 
+  clicks++;
+  document.getElementById("demo").innerHTML = "&nbsp;&nbsp;Clicked " + clicks + " times<br>";
 }
